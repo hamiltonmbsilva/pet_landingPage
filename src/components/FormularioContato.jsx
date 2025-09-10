@@ -1,7 +1,7 @@
 // src/components/FormularioContato.jsx
 import React, { useState } from 'react';
-import '../../assets/styles/FormularioContato.css'; // CSS
-
+//import '../../assets/styles/FormularioContato.css'; // CSS
+import '../assets/styles/FormularioContato.css'
 const FormularioContato = () => {
   const [formData, setFormData] = useState({
     nome: '',

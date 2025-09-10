@@ -1,0 +1,72 @@
+/* src/assets/styles/FormularioContato.css */
+
+.formulario-contato {
+  background-color: #f9f9f9;
+  padding: 4rem 2rem;
+}
+
+.formulario-contato h2 {
+  margin-bottom: 2rem;
+}
+
+.formulario-contato form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formulario-contato .campo {
+  text-align: left;
+}
+
+.formulario-contato .campo label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.formulario-contato .campo input,
+.formulario-contato .campo textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.formulario-contato .campo input:focus,
+.formulario-contato .campo textarea:focus {
+  outline: none;
+  border-color: #ff8c42;
+}
+
+.formulario-contato .campo textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.formulario-contato button {
+  background-color: #ff8c42;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.formulario-contato button:hover {
+  background-color: #e06c2d;
+}
+
+@media (max-width: 768px) {
+  .formulario-contato {
+    padding: 2rem 1rem;
+  }
+}

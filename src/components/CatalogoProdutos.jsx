@@ -1,9 +1,9 @@
 // src/components/CatalogoProdutos.jsx
 import React, { useState, useEffect } from 'react';
-import CardProduto from './ui/CardProduto';
-import { getProdutos } from '../services/api';
-import '../../assets/styles/CatalogoProdutos.css'; // Vamos criar este CSS depois
-
+import CardProduto from '../components/ui/CardProduto';
+import { getProdutos } from '../pages/api';
+//import '../assets/styles/CatalogoProdutos.css'; // Vamos criar este CSS depois
+import '../assets/styles/CatalogoProdutos.css'
 const CatalogoProdutos = () => {
   const [produtos, setProdutos] = useState([]);
 
