@@ -8,7 +8,7 @@ const Depoimentos = () => {
       texto: 'Adorei os produtos! Meu cachorro se divertiu muito com o novo brinquedo.',
       autor: 'Maria S.',
       pet: 'Buddy',
-      imagem: '/assets/images/depoimento1.jpg'
+      imagem:'/assets/images/depoimento1.jpg'
     },
     {
       id: 2,
@@ -17,7 +17,6 @@ const Depoimentos = () => {
       pet: 'Mia',
       imagem: '/assets/images/depoimento2.jpg'
     },
-    // Adicione mais depoimentos aqui
   ];
 
   return (

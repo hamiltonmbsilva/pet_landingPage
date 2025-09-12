@@ -1,9 +1,8 @@
-// src/components/CatalogoProdutos.jsx
 import React, { useState, useEffect } from 'react';
-import CardProduto from '../components/ui/CardProduto';
+import CardProduto from './ui/CardProduto';
 import { getProdutos } from '../pages/api';
-//import '../assets/styles/CatalogoProdutos.css'; // Vamos criar este CSS depois
-import '../assets/styles/CatalogoProdutos.css'
+import '../assets/styles/CatalogoProdutos.css';
+
 const CatalogoProdutos = () => {
   const [produtos, setProdutos] = useState([]);
 
@@ -18,11 +17,13 @@ const CatalogoProdutos = () => {
 
   return (
     <section id="produtos" className="catalogo-produtos">
-      <h2>Nossos Produtos</h2>
-      <div className="catalogo-grid">
-        {produtos.map(produto => (
-          <CardProduto key={produto.id} produto={produto} />
-        ))}
+      <div className="container">
+        <h2>Nossos Produtos</h2>
+        <div className="catalogo-grid">
+          {produtos.map(produto => (
+            <CardProduto key={produto.id} produto={produto} />
+          ))}
+        </div>
       </div>
     </section>
   );

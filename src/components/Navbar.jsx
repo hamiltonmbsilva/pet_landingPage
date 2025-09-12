@@ -3,14 +3,8 @@ import '../assets/styles/Navbar.css';
 
 const Navbar = () => {
   const [menuAberto, setMenuAberto] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuAberto(!menuAberto);
-  };
-
-  const fecharMenu = () => {
-    setMenuAberto(false);
-  };
+  const toggleMenu = () => setMenuAberto(!menuAberto);
+  const fecharMenu = () => setMenuAberto(false);
 
   return (
     <nav className="navbar">

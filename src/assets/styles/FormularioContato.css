@@ -1,12 +1,5 @@
-/* src/assets/styles/FormularioContato.css */
-
 .formulario-contato {
   background-color: #f9f9f9;
-  padding: 4rem 2rem;
-}
-
-.formulario-contato h2 {
-  margin-bottom: 2rem;
 }
 
 .formulario-contato form {
@@ -15,9 +8,6 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-}
-
-.formulario-contato .campo {
   text-align: left;
 }
 
@@ -56,17 +46,10 @@
   border-radius: 50px;
   font-size: 1.1rem;
   font-weight: bold;
-  cursor: pointer;
   border: none;
   transition: background-color 0.3s ease;
 }
 
 .formulario-contato button:hover {
   background-color: #e06c2d;
-}
-
-@media (max-width: 768px) {
-  .formulario-contato {
-    padding: 2rem 1rem;
-  }
 }

@@ -7,7 +7,7 @@ const SobreNos = () => {
       <div className="container">
         <h2>Nossa História e Missão</h2>
         <div className="sobre-nos-conteudo">
-          <img src="/assets/images/nossa-historia.jpg" alt="Pet Shop" className="sobre-nos-imagem" />
+          <img src="../assets/images/nossa-historia.jpg" alt="Pet Shop" className="sobre-nos-imagem" />
           <div className="sobre-nos-texto">
             <p>
               Nossa jornada começou com um amor incondicional por animais. Acreditamos que pets são membros da família e merecem o melhor cuidado possível.

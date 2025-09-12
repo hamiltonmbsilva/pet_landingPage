@@ -1,7 +1,6 @@
-// src/App.jsx
 import React from 'react';
 import Home from './pages/Home';
-import './assets/styles/global.css'; // Estilos CSS globais, como fontes, reset, etc.
+import './assets/styles/global.css';
 
 const App = () => {
   return (

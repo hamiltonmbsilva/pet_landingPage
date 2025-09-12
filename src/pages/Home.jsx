@@ -1,4 +1,3 @@
-// src/pages/Home.jsx
 import React from 'react';
 import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
@@ -7,8 +6,7 @@ import CatalogoProdutos from '../components/CatalogoProdutos';
 import Depoimentos from '../components/Depoimentos';
 import FormularioContato from '../components/FormularioContato';
 import Footer from '../components/Footer';
-
-import '../assets/styles/Home.css'; // Estilos específicos da página Home
+import '../assets/styles/Home.css';
 
 const Home = () => {
   return (
