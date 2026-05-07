@@ -1,15 +1,14 @@
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
+  inset: 0 0 auto 0;
   z-index: 1000;
+  height: 82px;
+  padding: 0 max(16px, calc((100vw - var(--container)) / 2));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 250, 245, 0.98);
+  border-bottom: 1px solid rgba(234, 223, 213, 0.8);
 }
 
 .navbar-logo img {

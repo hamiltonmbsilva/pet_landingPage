@@ -1,28 +1,39 @@
-import React, { useState } from 'react';
-import '../assets/styles/Navbar.css';
+import { useState } from "react";
 
-const Navbar = () => {
+export default function Navbar() {
   const [menuAberto, setMenuAberto] = useState(false);
-  const toggleMenu = () => setMenuAberto(!menuAberto);
-  const fecharMenu = () => setMenuAberto(false);
+
+  function fecharMenu() {
+    setMenuAberto(false);
+  }
 
   return (
-    <nav className="navbar">
-      <a href="#" className="navbar-logo" onClick={fecharMenu}>
-        <img src="/assets/images/logo.png" alt="Logo Pet Store" />
+    <header className="navbar">
+      <a href="#inicio" className="navbar__brand" onClick={fecharMenu}>
+        <span className="navbar__logo">HDS</span>
+        <div>
+          <strong>PetCare Store</strong>
+          <small>Cuidado moderno para pets</small>
+        </div>
       </a>
-      <div className="navbar-toggle" onClick={toggleMenu}>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <ul className={`navbar-menu ${menuAberto ? 'aberto' : ''}`}>
-        <li><a href="#produtos" onClick={fecharMenu}>Nossos Produtos</a></li>
-        <li><a href="#sobre-nos" onClick={fecharMenu}>Sobre Nós</a></li>
-        <li><a href="#contato" onClick={fecharMenu}>Contato</a></li>
-      </ul>
-    </nav>
-  );
-};
 
-export default Navbar;
+      <button
+        className="navbar__toggle"
+        onClick={() => setMenuAberto((estadoAtual) => !estadoAtual)}
+        aria-label="Abrir menu"
+        aria-expanded={menuAberto}
+      >
+        <span />
+        <span />
+        <span />
+      </button>
+
+      <nav className={`navbar__menu ${menuAberto ? "navbar__menu--open" : ""}`}>
+        <a href="#sobre" onClick={fecharMenu}>Sobre</a>
+        <a href="#produtos" onClick={fecharMenu}>Produtos</a>
+        <a href="#depoimentos" onClick={fecharMenu}>Depoimentos</a>
+        <a href="#contato" onClick={fecharMenu} className="navbar__cta">Contato</a>
+      </nav>
+    </header>
+  );
+}

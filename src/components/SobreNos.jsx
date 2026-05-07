@@ -1,25 +1,42 @@
-import React from 'react';
-import '../assets/styles/SobreNos.css';
-
-const SobreNos = () => {
+export default function SobreNos() {
   return (
-    <section id="sobre-nos" className="sobre-nos-section">
-      <div className="container">
-        <h2>Nossa História e Missão</h2>
-        <div className="sobre-nos-conteudo">
-          <img src="../assets/images/nossa-historia.jpg" alt="Pet Shop" className="sobre-nos-imagem" />
-          <div className="sobre-nos-texto">
-            <p>
-              Nossa jornada começou com um amor incondicional por animais. Acreditamos que pets são membros da família e merecem o melhor cuidado possível.
-            </p>
-            <p>
-              Nosso objetivo é oferecer produtos de alta qualidade, seguros e que tragam alegria e bem-estar para o seu companheiro de quatro patas. Todos os nossos produtos são selecionados com carinho, pensando na saúde e felicidade deles.
-            </p>
+    <section id="sobre" className="section about">
+      <div className="container about__grid">
+        <div className="about__image">
+          <img src="/assets/images/nossa-historia.jpg" alt="Atendimento em pet shop" />
+        </div>
+
+        <div className="about__content">
+          <span className="section-label">Nossa missão</span>
+          <h2>Cuidar bem começa por escolher melhor.</h2>
+
+          <p>
+            A PetCare Store nasceu com o objetivo de aproximar tutores de produtos
+            confiáveis, seguros e selecionados com atenção para cada fase da vida do pet.
+          </p>
+
+          <p>
+            Nesta versão modernizada, o projeto foi pensado como uma vitrine de
+            portfólio: visual profissional, boa organização de código, responsividade
+            e navegação simples.
+          </p>
+
+          <div className="about__stats">
+            <div>
+              <strong>100%</strong>
+              <span>responsivo</span>
+            </div>
+            <div>
+              <strong>SEO</strong>
+              <span>estrutura amigável</span>
+            </div>
+            <div>
+              <strong>HDS</strong>
+              <span>projeto autoral</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
   );
-};
-
-export default SobreNos;
+}

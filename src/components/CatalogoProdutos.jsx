@@ -1,32 +1,43 @@
-import React, { useState, useEffect } from 'react';
-import CardProduto from './ui/CardProduto';
-import { getProdutos } from '../pages/api';
-import '../assets/styles/CatalogoProdutos.css';
+import { useEffect, useState } from "react";
+import { listarProdutos } from "../data/produtosRepository";
+import CardProduto from "./CardProduto";
 
-const CatalogoProdutos = () => {
+export default function CatalogoProdutos() {
   const [produtos, setProdutos] = useState([]);
+  const [carregando, setCarregando] = useState(true);
 
   useEffect(() => {
-    const fetchProdutos = async () => {
-      const data = await getProdutos();
-      setProdutos(data);
-    };
+    async function carregarProdutos() {
+      const resposta = await listarProdutos();
+      setProdutos(resposta);
+      setCarregando(false);
+    }
 
-    fetchProdutos();
+    carregarProdutos();
   }, []);
 
   return (
-    <section id="produtos" className="catalogo-produtos">
+    <section id="produtos" className="section products">
       <div className="container">
-        <h2>Nossos Produtos</h2>
-        <div className="catalogo-grid">
-          {produtos.map(produto => (
-            <CardProduto key={produto.id} produto={produto} />
-          ))}
+        <div className="section-heading">
+          <span className="section-label">Catálogo</span>
+          <h2>Produtos em destaque</h2>
+          <p>
+            Cards modernos, responsivos e organizados para apresentar produtos
+            de forma clara.
+          </p>
         </div>
+
+        {carregando ? (
+          <p>Carregando produtos...</p>
+        ) : (
+          <div className="products__grid">
+            {produtos.map((produto) => (
+              <CardProduto key={produto.id} produto={produto} />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
-};
-
-export default CatalogoProdutos;
+}

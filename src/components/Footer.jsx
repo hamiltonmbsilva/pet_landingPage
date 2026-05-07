@@ -1,35 +1,33 @@
-import React from 'react';
-import '../assets/styles/Footer.css';
-
-const Footer = () => {
+export default function Footer() {
   return (
     <footer className="footer">
-      <div className="footer-conteudo">
-        <div className="footer-contato">
-          <h3>Fale Conosco</h3>
-          <p>Email: contato@petstore.com.br</p>
-          <p>Telefone: (11) 99999-9999</p>
+      <div className="container footer__grid">
+        <div>
+          <h3>PetCare Store</h3>
+          <p>
+            Projeto modernizado por HDS para portfólio, com foco em layout
+            responsivo, experiência do usuário e organização de código.
+          </p>
         </div>
-        <div className="footer-redes">
-          <h3>Siga-nos</h3>
-          <div className="redes-sociais-icones">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-              <img src="/assets/images/icon-facebook.png" alt="Facebook" />
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-              <img src="/assets/images/icon-instagram.png" alt="Instagram" />
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-              <img src="/assets/images/icon-twitter.png" alt="Twitter" />
-            </a>
-          </div>
+
+        <div>
+          <h4>Navegação</h4>
+          <a href="#inicio">Início</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#produtos">Produtos</a>
+          <a href="#contato">Contato</a>
+        </div>
+
+        <div>
+          <h4>Contato</h4>
+          <p>contato@petcare.com.br</p>
+          <p>(11) 99999-9999</p>
         </div>
       </div>
-      <div className="footer-copyright">
-        <p>&copy; {new Date().getFullYear()} Pet Store. Todos os direitos reservados.</p>
+
+      <div className="footer__bottom">
+        <p>© {new Date().getFullYear()} PetCare Store. Desenvolvido por HDS.</p>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

@@ -1,27 +1,25 @@
-import React from 'react';
-import Navbar from '../components/Navbar';
-import HeroSection from '../components/HeroSection';
-import SobreNos from '../components/SobreNos';
-import CatalogoProdutos from '../components/CatalogoProdutos';
-import Depoimentos from '../components/Depoimentos';
-import FormularioContato from '../components/FormularioContato';
-import Footer from '../components/Footer';
-import '../assets/styles/Home.css';
+import Navbar from "../components/Navbar";
+import HeroSection from "../components/HeroSection";
+import SobreNos from "../components/SobreNos";
+import CatalogoProdutos from "../components/CatalogoProdutos";
+import Depoimentos from "../components/Depoimentos";
+import FormularioContato from "../components/FormularioContato";
+import Footer from "../components/Footer";
 
-const Home = () => {
+export default function Home() {
   return (
-    <div className="home-page">
+    <div className="app-page">
       <Navbar />
-      <HeroSection />
+
       <main>
+        <HeroSection />
         <SobreNos />
         <CatalogoProdutos />
         <Depoimentos />
         <FormularioContato />
       </main>
+
       <Footer />
     </div>
   );
-};
-
-export default Home;
+}
